@@ -18,8 +18,8 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET Product page. */
-router.get('/product', function(req, res, next) {
-  res.render('index', { title: 'Products', pageName: "Product Page" });
+router.get('/products', function(req, res, next) {
+  res.render('index', { title: 'Products', pageName: "Products Page" });
 });
 
 /* GET Services page. */
@@ -29,7 +29,7 @@ router.get('/services', function(req, res, next) {
 
 /* GET Contact us page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Us', pageName: "Contact page" });
+  res.render('index', { title: 'Contact', pageName: "Contact page" });
 });
 
 
