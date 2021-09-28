@@ -1,19 +1,23 @@
 <!-- Main Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand" href="/">
+    <div>
+      <img src="images/logo.png" id="logo-image" alt="enterprise-logo">
+    </div>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
 
         <% if (title == "Home") { %>
           <li class="nav-item active">
         <% } else {%>
           <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/home"><i class="fas fa-laptop-house"></i>Home</a>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i>Home Page</a>
         </li>
 
         <% if (title == "About") { %>
@@ -21,15 +25,15 @@
         <% } else {%>
           <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
+          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About Me</a>
         </li>
 
-        <% if (title == "Products") { %>
+        <% if (title == "Projects") { %>
           <li class="nav-item active">
         <% } else {%>
           <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/products"><i class="fab fa-elementor"></i> Products</a>
+          <a class="nav-link" href="/projects"><i class="fab fa-elementor"></i> Projects</a>
         </li>
 
         <% if (title == "Services") { %>
@@ -45,7 +49,8 @@
         <% } else {%>
           <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact</a>
+          <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
         </li>
     </div>
   </nav>
+</header>
