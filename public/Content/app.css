@@ -48,16 +48,13 @@ a {
 
 .btn {
   display: inline-block;
-  border-radius: 3px;
   color: var(--main-white);
 }
 
 .main-btn {
   font-size: 1.5rem;
   border: 2px solid var(--main-btn-color);
-  padding: 0.5rem 4.5rem;
   position: relative;
-  margin-top: 3rem;
 }
 
 .main-btn:hover {
@@ -74,7 +71,6 @@ a {
 * Navigation Section
 **/
 #logo-image {
-  border-radius: 5px;
   max-width:100px;
 }
 
