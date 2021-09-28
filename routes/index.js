@@ -18,8 +18,8 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET Product page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products', pageName: "Products Page" });
+router.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'Projects', pageName: "Projects Page" });
 });
 
 /* GET Services page. */

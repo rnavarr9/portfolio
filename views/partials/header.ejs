@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <!-- Css section -->
-<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
-  <link rel='stylesheet' href='/content/app.css' />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!-- Css section -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Content/app.css" />
+  </head>
+  <body>
+    <% if (title == "Home") { %>
+    <div id="particles-js">
+      <div id="welcome-section">
+        <h6 id="mission" class="font-italic">I am here to help you thrive by building the app your buisiness needs</h6>
+        <hr/>
+        <hr/>
+        <hr/>
+        <h1>Hello, I'm <span>Renzo Navarro</span></h1>
+        <h6>I am a full-stack software developer</h6>
+        <div class="btn-container">
+          <a href="/about" class="btn main-btn explore-btn">Explore</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </body>
+</html>
