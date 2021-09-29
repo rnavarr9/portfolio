@@ -1,0 +1,133 @@
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
+<!-- Main content -->
+<main>
+  <div class="container">
+    <div id="section-heading" class="row d-flex justify-content-center mt-4">
+      <div class="container">
+        <h1 class="text-center">Projects</h1>
+        <h6 class="text-center">View some of my recent work</h6>
+      </div>
+      <hr />
+
+      <%- include("partials/modal", { modalId: "projectDescription-1", projectName: "Product Landing Page",
+      projectDescription: "Single Page for mountain lodge agency. Responsive \
+      website made from scratch with Html, CSS, jQuery, Node.JS and \
+      Express.Js", projectRole: "As a <b>Front-End Developer</b>, I designed the User Interface in Figma and implemented it with HTML, CSS, and JQuery"}) %> 
+      
+      <%- include("partials/modal", { modalId: "projectDescription-2", projectName: "Chronos \
+      Planner", projectDescription: "Web admin page. Employee schedule manager \
+      for car-wash service. Stack: PSQL, Sequelize, GraphQL, Apollo \
+      Client/Server, ReactJS, React-Native & Material-UI.", projectRole: "As a <b>Full-Stack Developer</b>, I designed the backend, the database schema, and designed the UI for both, the website and the mobile app"}) %> 
+      
+      <%- include("partials/modal", {
+      modalId: "projectDescription-3", projectName: "Weather Forecast", projectDescription: "Weather forecast \
+      app that uses redux as the state manager. Front-end stack: Material-UI, \
+      react-sparklines, axios. APIs openWeather and GoogleMaps", projectRole: "As a <b>Front-End Developer</b>, I designed the User Interface in Figma and implemented it with HTML, CSS, and JQuery"}) %>
+
+      <div class="row d-flex justify-content-center mt-5">
+        <div
+          class="card border-secondary mx-3"
+          style="width: 22rem"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        >
+          <img
+            src="images/product-landing-page.jpg"
+            class="card-img-top"
+            alt="Screenshoots of Landing Page"
+          />
+          <div class="card-body">
+            <hr class="mt-1">
+            <h5 class="card-title text-center">Product Landing Page</h5>
+            <h6 class="text-center font-italic">Front-End Developer</h6>
+            <div class="d-flex justify-content-center pt-3">
+              <a
+                target="blank_"
+                class="btn btn-primary mx-2"
+                data-toggle="modal"
+                data-target="#projectDescription-1"
+                >Details</a
+              >
+              <a
+                href="https://fcc-rwd-p03.herokuapp.com/"
+                target="blank_"
+                class="btn btn-danger mx-2"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="card border-secondary mx-3"
+          style="width: 22rem"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <img
+            src="images/chronos-planner.jpg"
+            class="card-img-top"
+            alt="Screenshoots of Chronos Planner"
+          />
+          <div class="card-body">
+            <hr class="mt-1">
+            <h5 class="card-title text-center">Chronos Planner</h5>
+            <h6 class="text-center font-italic">Full-Stack Developer</h6>
+            <div class="d-flex justify-content-center pt-3">
+              <a
+                target="blank_"
+                class="btn btn-primary mx-2"
+                data-toggle="modal"
+                data-target="#projectDescription-2"
+                >Details</a
+              >
+              <a
+                href="https://chronos-planner-app.herokuapp.com/"
+                target="blank_"
+                class="btn btn-danger mx-2"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="card border-secondary mx-3"
+          style="width: 22rem"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        >
+          <img
+            src="images/weather-forecast.png"
+            class="card-img-top"
+            alt="Screenshoots of Weather Forecast"
+          />
+          <div class="card-body">
+            <hr class="mt-1">
+            <h5 class="card-title text-center">Weather Forecast</h5>
+            <h6 class="text-center font-italic">Front-End Developer</h6>
+            <div class="d-flex justify-content-center pt-3">
+              <a
+                target="blank_"
+                class="btn btn-primary mx-2"
+                data-toggle="modal"
+                data-target="#projectDescription-3"
+                >Details</a
+              >
+              <a
+                href="https://tr010-react-redux-weather-app.netlify.app/"
+                target="blank_"
+                class="btn btn-danger mx-2"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script
+  type="text/javascript"
+  src="/Assets/animations/particles.min.js"
+></script>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

@@ -34,9 +34,14 @@ html {
   --main-btn-hover-color: #b33910;
   /* --contact-bg-input: #1b2833; */
 }
+
 a {
   text-decoration: none;
 }
+
+/* body {
+  margin-bottom: 60px;
+} */
 
 /**
 * Reusable Classes
@@ -169,3 +174,7 @@ a {
 .fa-file-code:hover {
   color: #debd3f
 }
+
+/**
+* Projects
+**/
