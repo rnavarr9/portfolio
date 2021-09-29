@@ -79,13 +79,13 @@ a {
   background-color: var(--particle-bg);
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 
 #welcome-section {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--main-white);
@@ -167,5 +167,5 @@ a {
   color: #006bb7;
 }
 .fa-file-code:hover {
-  color: #7180B9
+  color: #debd3f
 }
