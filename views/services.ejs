@@ -1,0 +1,29 @@
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
+<!-- Main content -->
+<main>
+  <div class="container">
+    <div
+      id="section-heading"
+      class="row d-flex justify-content-center align-items-center mt-4"
+    >
+      <div class="container">
+        <h1 class="text-center">Services</h1>
+        <h6 class="text-center">What I can do for you</h6>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
+        <%- include("partials/serviceItems", {icon: "fas fa-laptop-code", serviceName: "Web Design", serviceDescription: "Single-page (SPA) design with Search Engine Optimization (SEO)."})%>
+        <%- include("partials/serviceItems", {icon: "fab fa-react", serviceName: "React Dev", serviceDescription: "Web and Mobile development with ReactJS and React Native"})%>
+        <%- include("partials/serviceItems", {icon: "fab fa-connectdevelop", serviceName: "API Integration", serviceDescription: "Integrate payment APIs like Stripe to your project"})%>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script
+  type="text/javascript"
+  src="/Assets/animations/particles.min.js"
+></script>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

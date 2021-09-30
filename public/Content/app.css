@@ -27,9 +27,9 @@ html {
   --header-bg-color: #0b172a;*/
   --nav-bg-color: #060b13;
   /*  --section-bg-color: #f5f5f5;
-  --bar-empty-color: #cbcbcb;
+  --bar-empty-color: #cbcbcb;*/
   --bar-filled-color: #4e7cc6;
-  --bar-label-color: #1d6195; */
+/*  --bar-label-color: #1d6195;
   --main-btn-color: #ff4b0d;
   --main-btn-hover-color: #b33910;
   /* --contact-bg-input: #1b2833; */
@@ -178,3 +178,23 @@ a {
 /**
 * Projects
 **/
+
+
+/**
+* Services
+**/
+.service-icon {
+padding: 2rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: var(--bar-filled-color);
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 5rem;
+}
