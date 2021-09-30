@@ -29,7 +29,12 @@ router.get("/services", function (req, res, next) {
 
 /* GET Contact us page. */
 router.get("/contact", function (req, res, next) {
-  res.render("index", { title: "Contact", pageName: "Contact page" });
+  res.render("contact", { title: "Contact", subtitle: "Let's work together", pageName: "Contact page",  });
+});
+
+/* GET Terms and Conditions page. */
+router.get("/terms-and-conditions", function (req, res, next) {
+  res.render("termsAndConditions", { title: "Terms and Conditions", subtitle: "Agreement on data policy", pageName: "Terms and Conditions",  });
 });
 
 module.exports = router;
