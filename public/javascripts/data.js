@@ -18,7 +18,7 @@ let freeCodeCamp = {
 
 let resume = {
   title: "Résumé",
-  href: "https://www.dropbox.com/s/tw6j2lklke16kil/Curriculum%20Vitae_S2.pdf",
+  href: "https://www.dropbox.com/s/uhiwa7edg783ddw/r%C3%A9sum%C3%A9Centennial.pdf",
   iconName: "fas fa-file-code",
 };
 
