@@ -10,8 +10,11 @@ let usersRouter = require('./routes/users');
 let app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views')); // It joins views into our seach path. Any template put in views subfolder will be available for referencing inside your application
-app.set('view engine', 'ejs'); // Configures out view engine to ejs
+
+// It joins views into our search path. Any template put in views subfolder will be available for referencing inside your application
+app.set('views', path.join(__dirname, 'views'));
+// Configures out view engine to ejs
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
