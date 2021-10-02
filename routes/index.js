@@ -37,4 +37,8 @@ router.get("/terms-and-conditions", function (req, res, next) {
   res.render("termsAndConditions", { title: "Terms and Conditions", subtitle: "Agreement on data policy", pageName: "Terms and Conditions",  });
 });
 
+router.get("*", function(req, res) {
+  res.render('error', {title: "Bad redirection", error: "404", message: "Redirection error =(", errorStatus: 404, errorStack: "=)"});
+})
+
 module.exports = router;

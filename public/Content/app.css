@@ -1,8 +1,15 @@
 /**
+INDEX
+*****
 - General Settings
+- Palette of colors
 - Reusable classes
 - Navigation Section
 - Welcome Section
+- About Section
+- Projects Section
+- Services Section
+- Contact Section
 */
 
 /**
@@ -15,6 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Palette of colors */
 :root {
   --particle-bg: black;
   --secondary-font-color: #fa8f19;
