@@ -50,13 +50,13 @@ a {
   color: var(--main-white);
 }
 
-.main-btn {
+.btn-container a {
   font-size: 1.5rem;
   border: 2px solid var(--main-btn-color);
   position: relative;
 }
 
-.main-btn:hover {
+.btn-container a:hover {
   background-color: var(--main-btn-hover-color);
 }
 
