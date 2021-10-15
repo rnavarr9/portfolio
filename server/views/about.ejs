@@ -1,0 +1,46 @@
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
+<!-- Main content -->
+<main>
+  <div id="about-subcontainer" class="container">
+    <div class="row mt-4">
+      <div
+        id="about-details"
+        data-aos="fade-down-right"
+        data-aos-delay="300"
+        class="w-100"
+      >
+        <div
+          id="profile-img"
+          class="d-flex justify-content-center align-items-center"
+        >
+          <img src="images/about.png" alt="developer-photo" />
+        </div>
+        <div id="who-am-i" class="d-flex justify-content-center mt-4 mb-2">
+          <h2>Renzo Navarro Pozo</h2>
+        </div>
+        <div style="max-width: 500px; margin: auto" class="px-3 px-sm-0">
+          <h5 class="text-justify">
+            Hi, I'm a telco engineer and a software developer.
+            <br />
+            I have a strong sense of responsibility and a deep desire to
+            continue learning about new web & mobile technologies.
+          </h5>
+        </div>
+      </div>
+      <div
+        class="row w-100 d-flex justify-content-center"
+        data-aos="fade-up-left"
+        data-aos-delay="300"
+      >
+        <div id="social-media" class="mt-4">
+          <ul class="nav-list d-flex justify-content-center">
+            <%- include partials/socialNetworksButtons.ejs %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
