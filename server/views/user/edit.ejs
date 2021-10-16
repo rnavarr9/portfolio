@@ -1,7 +1,5 @@
 <%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
 
-<!-- Content for the Add page -->
-
 <main class="container">
   <div class="row">
     <div class="offset-md-3 col-md-6">
@@ -15,6 +13,7 @@
             id="nameTextField"
             placeholder="Enter the user email"
             name="email"
+            value="<%= user.email  %> "
             required
           />
         </div>
@@ -26,6 +25,7 @@
             id="passwordTextField"
             placeholder="Enter the user password"
             name="password"
+            value="<%= user.password %> "
             required
           />
         </div>

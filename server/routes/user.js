@@ -22,7 +22,7 @@ router.get("/", (req, res, next) => {
 
 /* GET route for displaying the Add page - Create operation*/
 router.get("/add", (req, res, next) => {
-  res.render("/user/add", { title: "Add User" });
+  res.render("user/add", { title: "Add User" });
 });
 /* POST route for processing the Add page - Create operation*/
 router.post("/add", (req, res, next) => {
@@ -68,6 +68,7 @@ router.post("/edit/:id", (req, res, next) => {
       res.end(err);
     } else {
       // refresh the user list
+      console.log("User Updated!!!")
       res.redirect("/user-list");
     }
   });
@@ -75,12 +76,12 @@ router.post("/edit/:id", (req, res, next) => {
 /* GET to perform deletion - Delete operation*/
 router.get("/delete/:id", (req, res, next) => {
   let id = req.params.id;
-  Book.remove({ _id: id }, (err) => {
+  User.remove({ _id: id }, (err) => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
-      res.redirect("/book-list");
+      res.redirect("/user-list");
     }
   });
 });
