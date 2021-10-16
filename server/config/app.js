@@ -3,9 +3,17 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-let passport = require('passport');
+let cors = require('cors');
 
 require('dotenv').config()
+
+//modules for authentication
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
+
 
 // database setup
 let mongoose = require("mongoose")
@@ -34,16 +42,26 @@ app.set('views', path.join(__dirname, '../views'));
 // Configures out view engine to ejs
 app.set('view engine', 'ejs');
 
-// registration of passport middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules'))); // will be needed for font awesome
+
+// setup express session
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  resave: false,
+}))
+
+// initialize flash
+app.use(flash())
+
+// initialize passport (registration of passport middleware)
+app.use(passport.initialize());
+app.use(passport.session())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
