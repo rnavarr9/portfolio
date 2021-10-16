@@ -7,83 +7,22 @@ let mongoose = require("mongoose");
 // connect to our schema
 let User = require("../models/user");
 
+let userController = require("../controllers/user");
+
 /* GET route for the userlist page */
-router.get("/", (req, res, next) => {
-  User.find((err, userList) => {
-    if (err) {
-      return console.error(err);
-    } else {
-      // 'user is the view, and the rest is the object passed to the view'
-      res.render("user/list", { title: "User", userList: userList });
-      // console.log({userList})
-    }
-  });
-});
+router.get("/", userController.displayUserList);
 
 /* GET route for displaying the Add page - Create operation*/
-router.get("/add", (req, res, next) => {
-  res.render("user/add", { title: "Add User" });
-});
-/* POST route for processing the Add page - Create operation*/
-router.post("/add", (req, res, next) => {
-  let newUser = User({
-    email: req.body.email,
-    password: req.body.password,
-  });
+router.get("/add", userController.displayAddPage);
 
-  User.create(newUser, (err, User) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      res.redirect("/user-list");
-    }
-  });
-});
+/* POST route for processing the Add page - Create operation*/
+router.post("/add", userController.processAddPage);
 
 /* GET route for displaying the Edit page - Update operation*/
-router.get("/edit/:id", (req, res, next) => {
-  let id = req.params.id;
-  User.findById(id, (err, userToEdit) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      res.render("user/edit", { title: "Edit user", user: userToEdit });
-    }
-  });
-});
+router.get("/edit/:id", userController.displayEditPage);
 /* POST route for processing the Edit page - Update operation*/
-router.post("/edit/:id", (req, res, next) => {
-  let id = req.params.id;
-  let updatedUser = User({
-    _id: id,
-    email: req.body.email,
-    password: req.body.password,
-  });
-
-  User.updateOne({ _id: id }, updatedUser, (err) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      // refresh the user list
-      console.log("User Updated!!!")
-      res.redirect("/user-list");
-    }
-  });
-});
+router.post("/edit/:id", userController.processEditPage);
 /* GET to perform deletion - Delete operation*/
-router.get("/delete/:id", (req, res, next) => {
-  let id = req.params.id;
-  User.remove({ _id: id }, (err) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      res.redirect("/user-list");
-    }
-  });
-});
+router.get("/delete/:id", userController.performDelete);
 
 module.exports = router;
