@@ -35,16 +35,12 @@
           <td class="text-center col-3"><%= userList[count].contactNumber %></td>
           <td class="text-center col-3"><%= userList[count].email %></td>
           <td class="text-center col-2">
-              <% if (userList[count].displayName !== displayName) { %>  
                 <a href="/user-list/edit/<%= userList[count]._id %>" class="btn btn-primary btn-sm">
                 <i class="fas fa-pencil-alt pr-1"></i>Edit</a>
-              <% } %> 
             </td>
             <td class="text-center col-2">
-              <% if (userList[count].displayName !== displayName) { %>  
                 <a id="userCrud" href="/user-list/delete/<%= userList[count]._id %>" class="btn btn-danger btn-sm">
                 <i class="fas fa-trash-alt pr-1"></i>Delete</a>
-              <% } %> 
             </td>
           <% } else {%>
             <td class="text-center col-2"><%= userList[count].displayName %></td>

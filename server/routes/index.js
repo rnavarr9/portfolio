@@ -41,7 +41,6 @@ router.post("/login", indexController.processLoginPage);
 router.get("/logout", indexController.performLogout);
 
 
-// commented to test new user routes
 // router.get("*", function(req, res) {
 //   res.render('error', {title: "Bad redirection", error: "404", message: "Redirection error =(", errorStatus: 404, errorStack: "=)"});
 // })
