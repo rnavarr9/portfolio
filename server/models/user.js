@@ -1,4 +1,9 @@
-// required modules for the user model
+/**
+ * File name      : user.js
+ * Student’s Name : Renzo Navarro
+ * StudentID      : 301183749
+ * Date           : 10/21/2021
+ */
 
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");
@@ -28,7 +33,7 @@ let User = mongoose.Schema(
       type: String,
       default: "",
       trim: true,
-      required: "Contact number is required"
+      required: "Contact number is required",
     },
     created: {
       type: Date,

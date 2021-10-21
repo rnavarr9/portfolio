@@ -1,3 +1,10 @@
+/**
+ * File name      : user.js
+ * Student’s Name : Renzo Navarro
+ * StudentID      : 301183749
+ * Date           : 10/21/2021
+ */
+
 let express = require("express");
 
 let router = express.Router();
@@ -7,7 +14,6 @@ let passport = require("passport");
 
 // helper function for guard purposes
 function requireAuth(req, res, next) {
-  console.log({auth: req.isAuthenticated()})
   if (!req.isAuthenticated()) {
     return res.redirect("/login");
   }

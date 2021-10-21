@@ -1,3 +1,10 @@
+/**
+ * File name      : app.js
+ * Student’s Name : Renzo Navarro
+ * StudentID      : 301183749
+ * Date           : 10/21/2021
+ */
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
