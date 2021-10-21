@@ -1,6 +1,11 @@
+/**
+ * File name      : index.js
+ * Student’s Name : Renzo Navarro
+ * StudentID      : 301183749
+ * Date           : 10/21/2021
+ */
+
 let express = require("express");
-let router = express.Router();
-let moongoose = require("mongoose");
 let passport = require("passport");
 
 // create the User Model instance
@@ -27,11 +32,19 @@ module.exports.displayAboutPage = (req, res, next) => {
 };
 
 module.exports.displayProjectsPage = (req, res, next) => {
-  res.render("projects", { title: "Projects", pageName: "Projects Page", displayName: req.user ? req.user.displayName : "" });
+  res.render("projects", {
+    title: "Projects",
+    pageName: "Projects Page",
+    displayName: req.user ? req.user.displayName : "",
+  });
 };
 
 module.exports.displayServicesPage = (req, res, next) => {
-  res.render("services", { title: "Services", pageName: "Services Page", displayName: req.user ? req.user.displayName : "", });
+  res.render("services", {
+    title: "Services",
+    pageName: "Services Page",
+    displayName: req.user ? req.user.displayName : "",
+  });
 };
 
 module.exports.displayContactPage = (req, res, next) => {
