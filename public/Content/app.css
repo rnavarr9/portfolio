@@ -210,3 +210,21 @@ padding: 2rem;
 #contact {
   padding-bottom: 5rem;
 }
+
+/**
+* Login
+**/
+#login {
+  padding-top: 5rem;
+}
+
+/**
+* User
+**/
+.user {
+  padding-top: 1.5rem;
+}
+
+#userTable th {
+  border: hidden ;
+}

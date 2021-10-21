@@ -24,6 +24,22 @@ router.get("/contact", indexController.displayContactPage);
 /* GET Terms and Conditions page. */
 router.get("/terms-and-conditions", indexController.displayTermsAndConditions);
 
+/* GET route for displaying the Login page - Create operation*/
+router.get("/login", indexController.displayLoginPage);
+
+/* POST route for processing the Login page - Create operation*/
+router.post("/login", indexController.processLoginPage);
+
+/* GET route for displaying the Register page - Create operation*/
+router.get("/register", indexController.displayRegisterPage);
+
+/* POST route for processing the Register page - Create operation*/
+router.post("/register", indexController.processRegisterPage);
+
+/* GET to perform UserLogout*/
+router.get("/logout", indexController.performLogout);
+
+
 // commented to test new user routes
 // router.get("*", function(req, res) {
 //   res.render('error', {title: "Bad redirection", error: "404", message: "Redirection error =(", errorStatus: 404, errorStack: "=)"});
