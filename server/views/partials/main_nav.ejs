@@ -76,7 +76,6 @@
         >
       </li>
 
-      <% if (typeof displayName == 'string' && displayName) { %>
         <% if (title == "User") { %>
         <li class="nav-item active">
           <% } else { %>
@@ -84,7 +83,9 @@
           <% } %>
           <a class="nav-link" href="/user-list"><i class="fas fa-user-circle"></i> Users </a>
         </li>
-      <% } %> 
+
+
+
 
       <% if (typeof displayName == 'string' && displayName) { %>
       <li class="navbar-text mx-3 ml-5">
