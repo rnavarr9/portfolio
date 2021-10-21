@@ -30,12 +30,6 @@ router.get("/login", indexController.displayLoginPage);
 /* POST route for processing the Login page - Create operation*/
 router.post("/login", indexController.processLoginPage);
 
-/* GET route for displaying the Register page - Create operation*/
-router.get("/register", indexController.displayRegisterPage);
-
-/* POST route for processing the Register page - Create operation*/
-router.post("/register", indexController.processRegisterPage);
-
 /* GET to perform UserLogout*/
 router.get("/logout", indexController.performLogout);
 

@@ -6,13 +6,6 @@
       <h1><%= title %></h1>
       <br />
 
-      <% if (typeof displayName == 'string' && displayName) { %>
-      <a href="/user-list/add" class="btn btn-primary" role="button">
-        <i class="fas fa-plus-circle"></i>Add a user</a
-      >
-      <% } %>
-      <br />
-      <br />
       <table id="userTable" class="table table-bordered table-striped table-hover">
         <!-- Header Row -->
         <tr class="d-flex justify-content-center align-items-center">
@@ -22,9 +15,10 @@
             <th class="text-center col-3">Email Address</th>
             <th class="text-center col-4"><span>Actions</span></th>
           <% } else { %>
-            <th class="text-center col-2">User</th>
-            <th class="text-center col-4">Email</th>
-            <th class="text-center col-2">Display Name</th>
+            <th class="text-center col-2">Contact Name</th>
+            <th class="text-center col-3">Contact Number</th>
+            <th class="text-center col-3">Email Adress</th>
+            <th class="text-center col-4"></th>
           <% } %>
         </tr>
         <% for (let count = 0; count < userList.length; count++) { %>
@@ -47,8 +41,9 @@
             </td>
           <% } else {%>
             <td class="text-center col-2"><%= userList[count].displayName %></td>
-          <td class="text-center col-3"><%= userList[count].contactNumber %></td>
-          <td class="text-center col-3"><%= userList[count].email %></td>
+            <td class="text-center col-3"><%= userList[count].contactNumber %></td>
+            <td class="text-center col-3"><%= userList[count].email %></td>
+            <td class="text-center col-3"></td>
           <% } %>
         </tr>
         <% } %>

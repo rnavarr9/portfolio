@@ -18,36 +18,11 @@ module.exports.displayUserList = (req, res, next) => {
       })
       // 'user is the view, and the rest is the object passed to the view'
       res.render("user/list", {
-        title: "User",
+        title: "User List",
         userList: orderedUserList,
         displayName: req.user ? req.user.displayName : "",
       });
       // console.log({userList})
-    }
-  });
-};
-
-module.exports.displayAddPage = (req, res, next) => {
-  res.render("user/add", {
-    title: "Add User",
-    displayName: req.user ? req.user.displayName : "",
-  });
-};
-
-module.exports.processAddPage = (req, res, next) => {
-  let newUser = User({
-    email: req.body.email,
-    password: req.body.password,
-  });
-
-  User.create(newUser, (err, User) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      res.redirect("/user-list", {
-        displayName: req.user ? req.user.displayName : "",
-      });
     }
   });
 };
