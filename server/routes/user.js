@@ -28,7 +28,10 @@ router.get("/", userController.displayUserList);
 router.get("/edit/:id", requireAuth, userController.displayEditPage);
 /* POST route for processing the Edit page - Update operation*/
 router.post("/edit/:id", requireAuth, userController.processEditPage);
+/* GET route for displaying the Change Password page - Update operation*/
+router.get("/changePassword/:id", requireAuth, userController.displayChangePasswordPage);
+/* POST route for processing the Change Password page - Update operation*/
+router.post("/changePassword/:id", requireAuth, userController.processChangePassword);
 /* GET to perform deletion - Delete operation*/
 router.get("/delete/:id", requireAuth, userController.performDelete);
-
 module.exports = router;

@@ -12,85 +12,27 @@
     <h1>Edit User</h1>
     <div class="col-md-6">
       <h1><% title %></h1>
-      <br/>
+      <br />
       <form class="form" method="POST">
         <div class="row">
           <div class="col-12 col-sm-6">
             <div class="form-group">
               <label for="usernameTextField"> User Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="usernameTextField"
-                placeholder="Enter the user name"
-                name="username"
-                value="<%= user.username  %>"
-                required
-              />
+              <input type="text" class="form-control" id="usernameTextField" placeholder="Enter the user name" name="username" value="<%= user.username  %>" required />
             </div>
-            
+
             <div class="form-group">
               <label for="nameTextField"> Contact Name (Display Name)</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nameTextField"
-                placeholder="Enter the contact name"
-                name="displayName"
-                value="<%= user.displayName  %>"
-                required
-              />
+              <input type="text" class="form-control" id="nameTextField" placeholder="Enter the contact name" name="displayName" value="<%= user.displayName  %>" required />
             </div>
-            
+
             <div class="form-group">
               <label for="numberTextField"> Contact Number</label>
-              <input
-                type="text"
-                class="form-control"
-                id="numberTextField"
-                placeholder="Enter the contact number"
-                name="contactNumber"
-                value="<%= user.contactNumber  %>"
-                required
-              />
+              <input type="text" class="form-control" id="numberTextField" placeholder="Enter the contact number" name="contactNumber" value="<%= user.contactNumber  %>" required />
             </div>
-          </div>
-          <div class="col-12 col-sm-6">
             <div class="form-group">
               <label for="emailTextField"> User Email</label>
-              <input
-                type="text"
-                class="form-control"
-                id="emailTextField"
-                placeholder="Enter the user email"
-                name="email"
-                value="<%= user.email  %>"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="newPasswordTextField"> New Password </label>
-              <input
-                type="newPassword"
-                class="form-control"
-                id="newPasswordTextField"
-                placeholder="Enter the user new password"
-                name="newPassword"
-                value="<%= user.newPassword %>"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="currentPasswordTextField"> Current Password </label>
-              <input
-                type="currentPassword"
-                class="form-control"
-                id="currentPasswordTextField"
-                placeholder="Enter the user current password"
-                name="currentPassword"
-                value="<%= user.currentPassword %>"
-                required
-              />
+              <input type="text" class="form-control" id="emailTextField" placeholder="Enter the user email" name="email" value="<%= user.email  %>" required />
             </div>
           </div>
         </div>

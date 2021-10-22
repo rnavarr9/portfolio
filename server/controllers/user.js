@@ -51,18 +51,48 @@ module.exports.displayEditPage = (req, res, next) => {
 };
 
 module.exports.processEditPage = (req, res, next) => {
-  let id = req.params.id;
-  let updatedUser = User({
-    _id: id,
-    email: req.body.email,
-    contactNumber: req.body.contactNumber,
-    displayName: req.body.displayName,
-    username: req.body.username,
-  });
+    let id = req.params.id;
+    let updatedUser = User({
+      _id: id,
+      email: req.body.email,
+      contactNumber: req.body.contactNumber,
+      displayName: req.body.displayName,
+      username: req.body.username,
+    });
 
+    User.updateOne({ _id: id }, updatedUser, (err) => {
+      if (err) {
+        console.log(err);
+        res.end(err);
+      } else {
+        // refresh the user list
+        console.log("User Updated!!!");
+        res.redirect("/user-list");
+      }
+    });
+};
+
+module.exports.displayChangePasswordPage = (req, res, next) => {
+  let id = req.params.id;
+  User.findById(id, (err, userToEdit) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      res.render("user/changePassword", {
+        title: "Change User Password",
+        user: userToEdit,
+        displayName: req.user ? req.user.displayName : "",
+      });
+    }
+  });
+};
+
+module.exports.processChangePassword = (req, res, next) => {
+  let id = req.params.id;
   User.findOne({ _id: id }, (err, user) => {
     if (err) {
-      console.log("Error finding user to update", err);
+      console.log("Error finding user to change password", err);
       res.end(err);
     } else {
       user.changePassword(
@@ -74,18 +104,7 @@ module.exports.processEditPage = (req, res, next) => {
           }
         }
       );
-      // res.redirect("/user-list")
-    }
-  });
-
-  User.updateOne({ _id: id }, updatedUser, (err) => {
-    if (err) {
-      console.log(err);
-      res.end(err);
-    } else {
-      // refresh the user list
-
-      console.log("User Updated!!!");
+      console.log("Password updated!!!")
       res.redirect("/user-list");
     }
   });
